@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;
 
-public class Opening : MonoBehaviour
+public class OpeningDialogue : MonoBehaviour
 {
     public NPCConversation Conversation;
     // Start is called before the first frame update

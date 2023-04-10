@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿using DialogueEditor;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
 
+
+
 namespace StarterAssets
 {
+
 	[RequireComponent(typeof(CharacterController))]
 #if ENABLE_INPUT_SYSTEM
 	[RequireComponent(typeof(PlayerInput))]
@@ -72,7 +76,10 @@ namespace StarterAssets
 		private StarterAssetsInputs _input;
 		private GameObject _mainCamera;
 
-		private const float _threshold = 0.01f;
+        public ConversationManager conversationManager;
+
+
+        private const float _threshold = 0.01f;
 
 		private bool IsCurrentDeviceMouse
 		{
@@ -114,12 +121,26 @@ namespace StarterAssets
 		{
 			JumpAndGravity();
 			GroundedCheck();
-			Move();
+			if (conversationManager.IsConversationActive == false)
+			{
+				Move();
+				_input.SetCursorState(true);
+            }
+			else {
+                _input.SetCursorState(false);
+
+            }
+            
 		}
 
 		private void LateUpdate()
 		{
-			CameraRotation();
+            if (conversationManager.IsConversationActive == false)
+            {
+                CameraRotation();
+            }
+           
+           
 		}
 
 		private void GroundedCheck()
