@@ -5,11 +5,11 @@ using DialogueEditor;
 
 public class OpeningDialogue : MonoBehaviour
 {
-    public NPCConversation Conversation;
+    public NPCConversation Introduction;
     // Start is called before the first frame update
     void Start()
     {
-        ConversationManager.Instance.StartConversation(Conversation);
+        ConversationManager.Instance.StartConversation(Introduction);
     }
 
     // Update is called once per frame
