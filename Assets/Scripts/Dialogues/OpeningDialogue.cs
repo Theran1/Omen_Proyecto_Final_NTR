@@ -15,8 +15,6 @@ public class OpeningDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //int reputation = ConversationManager.Instance.GetInt("Reputation");
-
-        //Debug.Log(reputation);
+        
     }
 }

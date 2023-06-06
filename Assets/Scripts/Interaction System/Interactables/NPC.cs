@@ -58,13 +58,13 @@ public class NPC : MonoBehaviour, Interface_Interactable
 
         if(RecievedDialogue.name == "HungryDialogue")
         {
-            if (inventory.HasBread == true)
+            if (inventory.HasPotato == true)
             {
-                ConversationManager.Instance.SetBool("HasBread", true);
+                ConversationManager.Instance.SetBool("HasPotato", true);
             }
             else
             {
-                ConversationManager.Instance.SetBool("HasBread", false);
+                ConversationManager.Instance.SetBool("HasPotato", false);
             }
            // reputationLibra = ConversationManager.Instance.GetInt("reputationLibra");
 
@@ -74,13 +74,22 @@ public class NPC : MonoBehaviour, Interface_Interactable
             else
             ConversationManager.Instance.SetInt("reputationLibra", reputationLibra - 20);
             */
+            
+        }
+        if (RecievedDialogue.name == "Potato")
+        {
+            if (ConversationManager.Instance.GetBool("PickedUpPotato") == true)
+            {
+                inventory.HasPotato = true;
+            }
+            else { inventory.HasPotato = false;}
         }
 
-        //reputationLibra = ConversationManager.Instance.GetInt("reputationLibra");
+            //reputationLibra = ConversationManager.Instance.GetInt("reputationLibra");
 
 
 
-        return true;
+            return true;
     }
 
     private void Update()

@@ -6,12 +6,17 @@ using UnityEngine.InputSystem;
 public class Inventory : MonoBehaviour
 {
     public bool HasKey = false;
-    public bool HasBread = false;
+    public bool HasPotato = false;
 
     // Update is called once per frame
     private void Update()
     {
         if (Keyboard.current.qKey.wasPressedThisFrame) HasKey = !HasKey;
-        if (Keyboard.current.xKey.wasPressedThisFrame) HasBread = !HasBread;
+        if (Keyboard.current.xKey.wasPressedThisFrame) HasPotato = !HasPotato;
+    }
+
+    public void SetPotato(bool potato)
+    {
+        HasPotato = potato;
     }
 }
