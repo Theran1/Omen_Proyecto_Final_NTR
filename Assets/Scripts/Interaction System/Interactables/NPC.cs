@@ -56,8 +56,8 @@ public class NPC : MonoBehaviour, Interface_Interactable
     private void Update()
     {
 
-        reputationLibra = ConversationManager.Instance.GetInt("reputationLibra");
-        Debug.Log("libraRep: " + reputationLibra);
+        //reputationLibra = ConversationManager.Instance.GetInt("reputationLibra");
+        //Debug.Log("libraRep: " + reputationLibra);
     }
 
 }
