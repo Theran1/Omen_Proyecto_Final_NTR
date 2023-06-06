@@ -9,12 +9,14 @@ public class OpeningDialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ConversationManager.Instance.StartConversation(Introduction);
+        //ConversationManager.Instance.StartConversation(Introduction);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //int reputation = ConversationManager.Instance.GetInt("Reputation");
+
+        //Debug.Log(reputation);
     }
 }
