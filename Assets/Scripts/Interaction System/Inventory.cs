@@ -8,6 +8,8 @@ public class Inventory : MonoBehaviour
     public bool HasKey = false;
     public bool HasPotato = false;
 
+    
+
     // Update is called once per frame
     private void Update()
     {
@@ -19,4 +21,16 @@ public class Inventory : MonoBehaviour
     {
         HasPotato = potato;
     }
+
+    public void MovePlayer()
+    {
+
+
+        transform.position = new Vector3(100, 0, 0);
+    }
+       
+
 }
+
+
+
